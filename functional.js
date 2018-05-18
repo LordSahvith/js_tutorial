@@ -24,9 +24,43 @@ function functionalMap(states) {
 
 console.log(functionalMap(states));
 
-// create url with string
+// create full url with string
 function mapURL(states) {
-    return states.map(states => "https://example.com/" + urlify(states));
+    return states.map(state => "https://example.com/" + urlify(state));
 }
 
-console.log(mapURL(states));
+// console.log(mapURL(states));
+
+// filter: Imperative version
+function imperativeFilter(states) {
+    let singleWordSates = [];
+    states.forEach(function(state) {
+       if (state.split(/\s+/).length == 1) {
+           singleWordSates.push(state);
+       } 
+    });
+    return singleWordSates;
+}
+
+console.log(imperativeFilter(states));
+
+// filter: functional version
+function functionalFilter(states) {
+    return states.filter(state => state.split(/\s+/).length === 1);
+}
+
+console.log(functionalFilter(states));
+
+// filter: test string includes
+function includesFilter(states) {
+    return states.filter(state => state.includes("Dakota"));
+}
+
+console.log(includesFilter(states));
+
+// filter: test for 2 strings
+function doubleWordFilter(states) {
+    return states.filter(state => state.split(/\s+/).length === 2);
+}
+
+console.log(doubleWordFilter(states));
