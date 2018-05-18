@@ -6,11 +6,20 @@ function reverse(string) {
 // Defines a Phrase Object
 function Phrase(content) {
     this.content = content;
+    
+    // process string to lowercase
+    this.processor = function(string) {
+        return string.toLowerCase();
+    }
+    
+    // Returns content processed for palindrome testing
+    this.processedContent = function processedContent() {
+        return this.processor(this.content);
+    }
 
     // Returns true for a plaindrome, false otherwise
     this.palindrome = function palindrome() {
-        let processedContent = this.content.toLowerCase();
-        return processedContent === reverse(processedContent);
+        return this.processedContent() === reverse(this.processedContent());
     }
     
     // exercise 7.1
@@ -19,3 +28,15 @@ function Phrase(content) {
         return this.content.toUpperCase();
     }
 }
+
+function TranslatedPhrase(content, translation) {
+    this.content = content;
+    this.translation = translation;
+    
+    // Returns translation processed for palindrome testing
+    this.processedContent = function processedContent() {
+        return this.processor(this.translation);
+    }
+}
+
+TranslatedPhrase.prototype = new Phrase();
