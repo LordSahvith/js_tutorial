@@ -1,0 +1,25 @@
+{
+  "name": "js_tutorial",
+  "version": "1.0.0",
+  "description": "This is a sample website made as part of [*Learn Enough™ JavaScript to Be Dangerous*](http://learnenough.com/javascript-tutorial/), possibly the greatest beginner JavaScript tutorial in the history of the Universe. You should totally [ check it out](http://learnenough.com/javascript-tutorial/), and be sure to [join the email list](http://learnenough.com/#email_list) and [follow @learnenough ](http://twitter.com/learnenough) on Twitter.",
+  "main": "main.js",
+  "dependencies": {
+    "request": "^2.87.0",
+    "sahvith-palindrome": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LordSahvith/js_tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LordSahvith/js_tutorial/issues"
+  },
+  "homepage": "https://github.com/LordSahvith/js_tutorial#readme"
+}
